@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FLAMES — Classic</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Classic-styled FLAMES relationship checker. Enter two names and check your FLAMES result." />
+  <link rel="icon" href="favicon.svg" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <h1 class="title">FLAMES</h1>
+      <p class="subtitle">Find the bond between two names — in classic style</p>
+    </header>
+
+    <section class="card">
+      <form id="flamesForm" aria-label="FLAMES form">
+        <label class="field">
+          <span class="label-text">Your Name</span>
+          <input id="nameA" name="nameA" type="text" placeholder="e.g. John Doe" autocomplete="name" />
+        </label>
+
+        <label class="field">
+          <span class="label-text">Other Name</span>
+          <input id="nameB" name="nameB" type="text" placeholder="e.g. Jane Smith" autocomplete="name" />
+        </label>
+
+        <div class="actions">
+          <button id="checkBtn" type="submit" class="btn">Check FLAMES</button>
+          <button id="resetBtn" type="button" class="btn btn-ghost">Reset</button>
+        </div>
+      </form>
+
+      <div id="result" class="result" aria-live="polite" hidden>
+        <div class="result-card">
+          <div class="flame-icon" aria-hidden="true">🔥</div>
+          <h2 id="relation" class="relation"></h2>
+          <p id="relationDesc" class="relation-desc"></p>
+          <button id="shareBtn" class="btn btn-small">Copy result</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Classic FLAMES • Built with ❤️</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
